@@ -31,7 +31,7 @@ abstract class PostgresqlBinaryFunctionNode extends FunctionNode
 
         $parser->match(Lexer::T_COMMA);
 
-        $this->jsonPath = $parser->StringPrimary();
+        $this->jsonPath = $parser->ArithmeticPrimary();
 
         $parser->match(Lexer::T_CLOSE_PARENTHESIS);
     }
